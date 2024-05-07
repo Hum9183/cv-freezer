@@ -29,10 +29,10 @@ def delete_non_deformer_history(mesh):
     cmds.select(cl=True)
 
 
-def get_history(mesh, sort_type):
+def get_history(mesh, history_type):
     """ヒストリを取得する"""
     histories = cmds.listHistory(mesh)
-    histories = cmds.ls(histories, type=sort_type)
+    histories = cmds.ls(histories, type=history_type)
     return histories[0] if histories else None
 
 
